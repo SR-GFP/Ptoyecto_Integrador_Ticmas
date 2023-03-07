@@ -3,3 +3,113 @@
     margin: 0;
     box-sizing: border-box;
 }
+.flex{
+    display: flex;
+}
+.body{
+    background-image: url(./media/background.jfif);
+    background-size: cover;    
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 2fr 50% 1fr ;
+    grid-template-areas: 
+    "aside header"
+    "aside main"
+    "footer footer";
+}
+
+/*Estilos del header*/
+.header{
+    
+    grid-area: header;
+    margin: 1rem;
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto auto;
+}
+.header_titulo{
+    padding: 0.5rem;    
+}
+.header_titulo_h1{
+    font-size: 5rem;
+    color: white;
+    text-shadow: -15px -12px 9px #000000b8;
+}
+.header_titulo_h2{
+    font-size: 3rem;
+    text-shadow: 0px 2px 0px #ffffff61;
+}
+
+
+.header_datos{
+    height: auto;
+}
+.header_datos_fila{
+    padding: 1rem;
+    align-items: center;
+    flex-direction: column;
+    }
+
+
+.header_nav{
+    grid-column: 1/3;
+    display: flex;
+    justify-content: center;    
+}
+.header_nav_ul{
+    display: flex;
+    list-style: none;
+    width: 90%;
+    justify-content: space-around;
+
+}
+.header_nav_a{
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+/*Estilos del main*/
+.main{
+    grid-area: main;
+    margin: 1rem;
+    background-color: rgba(250, 235, 215, 0.59);
+}
+
+
+/*Estilos del Aside*/
+.aside{
+    grid-area: aside;
+    margin: 1rem;
+    background-color: rgba(0, 0, 0, 0.497);
+    color: antiquewhite;
+    text-align: center;
+}
+.aside_foto{
+    margin: 2rem;
+}
+.aside_foto img{
+    border-radius: 2rem;
+}
+.aside_info{
+    margin: 4rem 1rem;
+    text-align: left;
+}
+.aside_redes_links{
+    margin: 1rem;
+}
+
+/*Estilos del footer*/
+.footer{
+    grid-area: footer;    
+    margin: 1rem;
+    background-color: rgba(0, 0, 0, 0.842);
+}
+.footer_extras{
+    display: flex;
+}
+.footer_extras_columnas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
